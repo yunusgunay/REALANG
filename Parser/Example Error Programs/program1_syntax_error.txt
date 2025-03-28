@@ -1,0 +1,21 @@
+start
+    real x = 0;
+    real y = 0;
+    real z = 0;
+
+    // | usage instead of ||
+    while (x == 0 | y == 0 || z == 0) {
+        print("Enter non-zero values for x, y, and z:");
+
+        x = input();
+        y = input();
+        z = input();
+
+        if (x == 0 || y == 0 || z == 0) {
+            print("Error: All values must be non-zero. Please try again.");
+        }
+    }
+
+    real product = x * y * z;
+    print("The product of x, y, and z is: ", product);
+end

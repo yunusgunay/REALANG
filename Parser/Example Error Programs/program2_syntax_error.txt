@@ -1,0 +1,30 @@
+start
+    function foo(real p, real &q) {
+        print("Function name: foo");
+        print("Parameter p: ", p);
+        print("Parameter q: ", q);
+
+        if (p > q) {
+            return p;
+        } 
+	else {
+            return q;
+        }
+    }
+
+    list a_List = {3.15, 7, 0.03, -1.7};
+    list b_List = {9, -1.2, +1.2};
+
+    real a, b, c;
+    for(real i = 0; i < a_List.getSize(); i = i + 1) {
+
+        // Non-integer index access
+        a = a_List.getRealNum(0.5);
+
+        for (j = 0; j < b_List.getSize(); j = j + 1) {
+            b = b_List.getRealNum(j);
+            c = foo(a, b);
+            print("a = ", a, ", b = ", b, ", c = ", c);
+        }
+    }
+end

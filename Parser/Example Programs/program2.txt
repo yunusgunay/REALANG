@@ -1,0 +1,35 @@
+start
+    // Define the function foo
+    function foo(real p, real &q) {
+        print("Function name: foo");
+        print("Parameter p: ", p);
+        print("Parameter q: ", q);
+
+        if (p > q) {
+            return p;
+        } 
+	else {
+            return q;
+        }
+    }
+
+    list a_List = {3.15, 7, 0.03, -1.7};
+    list b_List = {9, -1.2, +1.2};
+
+    real a, b, c;
+
+    // Iterate through each value of a and b
+    for(real i = 0; i < a_List.getSize(); i = i + 1) {
+        a = a_List.getRealNum(i);
+
+        for (j = 0; j < b_List.getSize(); j = j + 1) {
+            b = b_List.getRealNum(j);
+
+            // Call foo and get the result
+            c = foo(a, b);
+
+            // Display the values of a, b, and c
+            print("a = ", a, ", b = ", b, ", c = ", c);
+        }
+    }
+end
