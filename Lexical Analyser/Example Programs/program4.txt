@@ -1,0 +1,28 @@
+start
+    // Testing function definition and calls
+    function sum(a, b) {
+        return (a + b);
+    }
+    
+    result = sum(5, 10);  // result = 15
+    print("Result of 5 + 10 is ", result);
+    
+    function factorial(n) {
+        if (n <= 1) {
+            return 1;
+        } else {
+            return n * factorial(n - 1);
+        }
+    }
+    
+    print("Result of factorial(5) is ", factorial(5));
+
+    // Testing data structure
+    list myList = {.11, 2., 3.14, sum(1, -3)};
+    myList.add(4);
+    myList.remove(2);
+    print("List size: ", myList.getSize());
+    
+    index2_element = myList.getRealNum(2);
+    print("Element at index 2: ", index2_element);
+end

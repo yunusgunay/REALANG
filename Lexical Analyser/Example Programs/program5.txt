@@ -1,0 +1,36 @@
+start
+    // Testing unary operators
+    x = -5;
+    y = +3;
+    z = -(+(-2));
+
+    // Testing complex arithmetic expressions
+    a = 2 * -3 + 4 / -2;  // a = -8
+    b = -5 + -3 * -2;     // b = 1
+    c = 2 ^ -3;           // c = 0.125
+    d = -2 ^ 3;           // d = -8
+
+    // Testing precedence and associativity
+    e = 2 +3 * 4 ^ 2;    	// e = 50
+    f = 2 *3 + 4 ^ 2;    	// f = 22
+    g = 2 ^ 3 ^ 2;        	// g = 512 (right associative)
+    h = (2 + 3) * (4 ^ 2); 	// h = 80
+
+    // Testing nested expressions
+    m = -(-(2 + 3) * -(4 - 5));  // m = -(-5 * -1) = -5
+    n = -(2 ^ -(3 + 1));         // n = -(2 ^ -4) = -0.0625
+    o = -(-2 ^ -(3 + 1));        // o = -(-2 ^ -4) = 0.0625
+
+    // Testing function calls with unary operators
+    function square(x) {
+        return x * x;
+    }
+    p = square(-2);       // p = 4
+    q = -square(3);       // q = -9
+    r = square(-(-2));    // r = 4
+   
+    function cube(x){
+    	return x * x * x;
+    }
+    s = cube(square(3));
+end

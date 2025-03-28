@@ -1,0 +1,25 @@
+start
+    // Initialize variables
+    x = 0;
+    y = 0;
+    z = 0;
+
+    // Loop until all values are non-zero
+    while (x == 0 || y == 0 || z == 0) {
+        print("Enter non-zero values for x, y, and z:");
+
+        // Read values from the user
+        x = input();
+        y = input();
+        z = input();
+
+        // Check if any value is zero
+        if (x == 0 || y == 0 || z == 0) {
+            print("Error: All values must be non-zero. Please try again.");
+        }
+    }
+
+    // Compute and display the product
+    product = x * y * z;
+    print("The product of x, y, and z is: ", product);
+end

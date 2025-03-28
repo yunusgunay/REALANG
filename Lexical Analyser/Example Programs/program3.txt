@@ -1,0 +1,53 @@
+start
+    // Testing assignments and arithmetic expressions
+    x = 10;
+    y = x + 5 * 2;  // y = 10 + 10 = 20
+    z = (x + y) / 2; // z = (10 + 20) / 2 = 15
+
+    // Testing conditionals (if/else)
+    if (x > 5 && y < 25) {
+        print("Condition 1 passed!");
+    } else {
+        print("Condition 1 failed!");
+    }
+
+    if (z == 15 || x != 10) {
+        print("Condition 2 passed!");
+    } else {
+        print("Condition 2 failed!");
+    }
+
+    // Else if conditions
+    if(z == 15){ 
+        print("Condition 1 passed!");
+    }
+    else if(z < 15){
+        print("Condition 2 passed!");
+    } else {
+        print("Condition 3 passed!");
+    }
+
+    // Testing loops (while and for)
+    i = 0;
+    while (!(i >= 3)) {
+        print("While loop iteration: ", i);
+        i = i + 1;
+    }
+
+    for (j = 0; j < 3; j = j + 1) {
+        print("For loop iteration: ", j);
+    }
+
+    // Testing input/output
+    a = input();
+    print("You entered: ", a, ".");
+
+    // This is a single-line comment test
+    /* Testing conditionals in a multi-line comment: 
+    if (x > 5 && y < 25) {
+        print("Condition 1 passed!");
+    } else {
+        print("Condition 1 failed!");
+    }
+    */
+end
